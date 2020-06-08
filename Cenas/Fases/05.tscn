@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fontes/TenaliRamakrishna-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Cenas/Fases/05.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="05" type="Node2D"]
+position = Vector2( 1, 0 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 383.0
+margin_bottom = 256.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_right = 383.0
+margin_bottom = 256.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
+margin_left = 50.0
+margin_top = 84.0
+margin_right = 332.0
+margin_bottom = 172.0
+
+[node name="Label" type="Label" parent="Control/CenterContainer/VBoxContainer"]
+margin_right = 282.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "Ganhou! Muito bom"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 282.0
+margin_bottom = 88.0
+text = "Voltar ao início"
+[connection signal="button_down" from="Control/CenterContainer/VBoxContainer/Button" to="Control" method="_on_Button_button_down"]
