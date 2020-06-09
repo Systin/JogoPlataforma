@@ -35,6 +35,7 @@ position = Vector2( 2976, 288 )
 
 [node name="Portal" parent="Rotacao/Plataforma_11" instance=ExtResource( 8 )]
 position = Vector2( 0, -64 )
+proxima_cena = "res://Cenas/Fases/05.tscn"
 
 [node name="Plataforma_04" parent="Rotacao" instance=ExtResource( 2 )]
 position = Vector2( 640, 224 )
@@ -85,10 +86,12 @@ position = Vector2( 0, -64 )
 
 [node name="Personagem" parent="." instance=ExtResource( 4 )]
 position = Vector2( 128, 160 )
+cena_atual = "res://Cenas/Fases/04.tscn"
 
 [node name="MataPlayer" parent="." instance=ExtResource( 5 )]
 position = Vector2( 128, 288 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
+cena_anterior = "res://Cenas/Fases/03.tscn"
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 10 )]

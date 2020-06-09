@@ -39,5 +39,6 @@ text = "Começar"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -5.0
 autoplay = true
 [connection signal="button_down" from="Control/CenterContainer/VBoxContainer/Button" to="Control" method="_on_Button_button_down"]

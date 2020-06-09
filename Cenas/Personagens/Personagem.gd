@@ -6,7 +6,8 @@ var esta_no_chao = false
 var defendendo = false
 var defesa = 100
 var barra_q
-
+export var cena_atual = ''
+ 
 func _ready():
 	barra_q = get_parent().get_node("HUD/VBoxContainer/HBoxContainer/BarraQ")
 
@@ -68,4 +69,4 @@ func _on_Pes_area_exited(area):
 
 func morte():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene('res://Cenas//Fases//'+get_tree().current_scene.name+'.tscn')
+	get_tree().change_scene(cena_atual)

@@ -66,11 +66,14 @@ position = Vector2( 1472, 160 )
 
 [node name="Portal" parent="Rotacao" instance=ExtResource( 7 )]
 position = Vector2( 2560, 160 )
+proxima_cena = "res://Cenas/Fases/03.tscn"
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
+cena_anterior = "res://Cenas/Fases/01.tscn"
 
 [node name="Personagem" parent="." instance=ExtResource( 5 )]
 position = Vector2( 128, 160 )
+cena_atual = "res://Cenas/Fases/02.tscn"
 
 [node name="MataPlayer" parent="." instance=ExtResource( 8 )]
 position = Vector2( 128, 352 )
