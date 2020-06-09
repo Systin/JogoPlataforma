@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Cenas/Logicas/Rotacao.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Objetos/Plataforma_02.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Cenas/Logicas/Move.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Cenas/Objetos/Portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Cenas/Objetos/Mana.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Cenas/Interface/AudioStreamPlayer2D.tscn" type="PackedScene" id=10]
 
 [node name="04" type="Node2D"]
 
@@ -89,3 +90,5 @@ position = Vector2( 128, 160 )
 position = Vector2( 128, 288 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 10 )]

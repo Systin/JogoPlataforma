@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Fontes/TenaliRamakrishna-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Cenas/Fases/05.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/start.ogg" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -49,4 +50,7 @@ margin_top = 68.0
 margin_right = 282.0
 margin_bottom = 88.0
 text = "Voltar ao início"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 [connection signal="button_down" from="Control/CenterContainer/VBoxContainer/Button" to="Control" method="_on_Button_button_down"]
