@@ -24,9 +24,6 @@ position = Vector2( 384, 224 )
 [node name="Plataforma_06" parent="Rotacao" instance=ExtResource( 2 )]
 position = Vector2( 1440, 224 )
 
-[node name="Mana" parent="Rotacao/Plataforma_06" instance=ExtResource( 9 )]
-position = Vector2( 0, -64 )
-
 [node name="Plataforma_07" parent="Rotacao" instance=ExtResource( 2 )]
 position = Vector2( 1952, 224 )
 
@@ -83,6 +80,15 @@ position = Vector2( 1696, 224 )
 
 [node name="Inimigo" parent="Rotacao/Move2/Plataforma_05" instance=ExtResource( 6 )]
 position = Vector2( 0, -64 )
+
+[node name="Mana" parent="Rotacao" instance=ExtResource( 9 )]
+position = Vector2( 1248, 233 )
+
+[node name="Mana2" parent="Rotacao" instance=ExtResource( 9 )]
+position = Vector2( 1440, 160 )
+
+[node name="Mana3" parent="Rotacao" instance=ExtResource( 9 )]
+position = Vector2( 1760, 96 )
 
 [node name="Personagem" parent="." instance=ExtResource( 4 )]
 position = Vector2( 128, 160 )

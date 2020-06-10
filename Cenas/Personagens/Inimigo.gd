@@ -17,4 +17,5 @@ func _on_CooldownSkill_timeout():
 
 func _on_Inimigo_area_entered(area):
 	if ('Aliado' in area.name):
+		area.queue_free()
 		queue_free()

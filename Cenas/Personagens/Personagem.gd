@@ -7,6 +7,10 @@ var defendendo = false
 var defesa = 100
 var barra_q
 export var cena_atual = ''
+export (PackedScene) var som_morte
+export (PackedScene) var som_pulo
+export (PackedScene) var som_mana
+var vivo = true
  
 func _ready():
 	barra_q = get_parent().get_node("HUD/VBoxContainer/HBoxContainer/BarraQ")
@@ -29,6 +33,8 @@ func _physics_process(delta):
 		velocidade += gravidade 
 	if (Input.is_action_just_pressed("ui_select") and esta_no_chao):
 		velocidade = -500
+		
+		cria_objeto(som_pulo)
 		esta_no_chao = false
 	position.y += velocidade * delta
 
@@ -50,6 +56,8 @@ func _on_Personagem_area_entered(area):
 
 	if ('Mana' in area.name):
 		area.queue_free()
+		
+		cria_objeto(som_mana)
 		defesa += 50
 		if (defesa > 100):
 			defesa = 100
@@ -68,5 +76,14 @@ func _on_Pes_area_exited(area):
 		esta_no_chao = false
 
 func morte():
+	if (vivo):
+		vivo = false
+		cria_objeto(som_morte)
+		hide()
+		yield(get_tree().create_timer(.2), "timeout")
 # warning-ignore:return_value_discarded
-	get_tree().change_scene(cena_atual)
+		get_tree().change_scene(cena_atual)
+
+func cria_objeto(som):
+	var obj = som.instance()
+	get_parent().add_child(obj)

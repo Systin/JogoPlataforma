@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Cenas/Sons/SonsDescartaveis.gd" type="Script" id=1]
+
+[node name="SonsDescartaveis" type="AudioStreamPlayer"]
+autoplay = true
+script = ExtResource( 1 )
+[connection signal="finished" from="." to="." method="_on_SonsDescartaveis_finished"]

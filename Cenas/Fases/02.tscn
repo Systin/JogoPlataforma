@@ -62,7 +62,10 @@ position = Vector2( 1984, 96 )
 position = Vector2( 2240, 160 )
 
 [node name="Mana" parent="Rotacao" instance=ExtResource( 6 )]
-position = Vector2( 1472, 160 )
+position = Vector2( 1184, 233 )
+
+[node name="Mana2" parent="Rotacao" instance=ExtResource( 6 )]
+position = Vector2( 1728, 160 )
 
 [node name="Portal" parent="Rotacao" instance=ExtResource( 7 )]
 position = Vector2( 2560, 160 )
