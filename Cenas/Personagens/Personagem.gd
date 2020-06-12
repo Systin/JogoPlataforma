@@ -18,7 +18,7 @@ func _ready():
 func _physics_process(delta):
 	if (Input.is_action_just_pressed("q") and defesa > 10):
 		defendendo = true
-	if (Input.is_action_just_released("q")):
+	if (Input.is_action_just_released("q") or defesa < 1):
 		defendendo = false
 	
 	$Protecao.visible = defendendo
